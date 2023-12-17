@@ -6,10 +6,10 @@ A company wants to create a predictive maintenance solution to reduce costs.
 The solution will use machine learning to predict device failures.
 The goal is to minimize false positives and false negatives.
 
-Main Objective
+#### Main Objective
 The data set aims to precisely predict the RUL of a filter. The data set contains training and test data, each with 50 life tests. The test data contains randomly right-censored run-to-failure measurements and the respective RUL. The main challenge is how to make the most use of the right-censored life data.
 
-Business Impact
+#### Business Impact
 The company benefits from making most use of the filters to avoid frequent replacements. 
 
 Data set Creator:
@@ -25,7 +25,7 @@ https://www.kaggle.com/datasets/prognosticshse/preventive-to-predicitve-maintena
 Dataset Citation:
 Hagmeyer, S., Mauthe, F., & Zeiler, P. (2021). Creation of Publicly Available Data Sets for Prognostics and Diagnostics Addressing Data Scenarios Relevant to Industrial Applications. International Journal of Prognostics and Health Management, Volume 12, Issue 2, DOI: 10.36001/ijphm.2021.v12i2.3087
 
-Summary of the findings:
+#### Summary of the findings:
 
 1. The filter failure occurs when the differential pressure across the filter exceeds 600 Pa. Looks like there are 5 readings in the dataset where differential pressure exceeds 600 Pa. 
 
@@ -50,10 +50,10 @@ RandomForestRegressor(max_depth=10, max_features='sqrt', n_estimators=200)
 
 11.The RNN model achieved a mse = 934 and mae = 16.85 (on training data) and mse=247, mae=13.9 (on the validation data).
 
-Conclusion: 
+#### Conclusion: 
 The random forest model appears to make a better prediction of differential pressur then RNN model (using LSTM). Both Random Forest and RNN models could be used predict the RUL of a filter and plan pro-active maintenence event before the filter reaches end of life. 
 
-Next steps and recommendations:
+#### Next steps and recommendations:
 Improve the accuracy of RNN model by adding more epochs and with multiple dense layers at the output. Use techniques learned in the course such as data augumentation and drop out with better fine tuning of the layers and number of parameters to achieve lower loss and error in prediction of remaining useful life (RUL) of the filter.
 
 
